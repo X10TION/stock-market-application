@@ -3,12 +3,129 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Stock Price</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
+   
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
+    <a class="navbar-item is-warning" href="/">
+        <b>|STOCK <sub class="color is-dark">MARKET</sub> </b>
+      </a>
+      <a class="navbar-item" href="/">
+         Home
+      </a>
+
+      <a class="navbar-item" href="about.html">
+        About
+      </a>      
+        </div>
+
+      </div>
+            
+
+    </div>
+<form action="/" method="post">
+    <div class="navbar-end">
+            
+      <div class="navbar-item">
+        
+       
+<span></span>
+    
+        <input class="input is-small " type="text" placeholder="Stock update" name="stock_value">
+    
+        <input class="button is-dark is-normal" type="submit" value="Lookup">
+      </div>
+      
+    </div>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
   <section class="section">
     {{{body}}}
   </section>
+
+
+  <footer class="footer">
+    <img src="https://d9hhrg4mnvzow.cloudfront.net/register.fxtm.info/stock-trading-ulp/b645e94c-stock-brands_10te04e000000000000000.jpg" alt="" class="myclass" loading="lazy"/>
+  <div class="content has-text-centered" loading="lazy">
+    <p>
+      <strong>Developer :</strong> by <a>Christopher White</a>. The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+      is licensed <a >Orbit Technology inc</a>.
+    </p>
+  </div>
+</footer>
   </body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+
+});
+  </script>
+  <style>
+    .color{
+        color:yellow;
+        padding-right: 30px;
+    }
+    .searchstock{
+        padding: 30px;
+        width: 30%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: -21px;
+        display: flex;
+    }
+    .imyclass{
+         display: flex;
+         align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+    }
+  </style>
 </html>

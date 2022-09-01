@@ -1,8 +1,43 @@
+{{!-- {{posted_data}} --}}
+<form action="/" method="post">
+  <div class="searchstock">
+    <input class="input is-primary is-normal" type="text" placeholder="Stock update" name="stock_value">
+  <input class="button is-dark is-normal" type="submit" value="Lookup">
+  </div
+</form>
 <div class="container">
+
+<div class="message is-primary">
+    <div class="message-body">
       <h1 class="title">
-        Hello from handlebar
+        {{stuff.companyName}} - ({{stuff.symbol}})
       </h1>
       <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
+       Market Analysis on <strong>STOCKS</strong>!
       </p>
+      </div>
+  </div>
+
+      <aside class="menu">
+  <p class="menu-label">
+    General 
+  </p>
+  <ul class="menu-list">
+    <li><a class="is-active">Dashboard</a><li>
+        <ul>
+        <li><a><strong> DelayedPrice</strong>   :  ${{stuff.delayedPrice}}</a></li>
+        <li><a><strong> Extended Price Time</strong>   :   {{stuff.extendedPriceTime}}</a></li>
+        <li><a><strong> High Source</strong>   :   {{stuff.highSource}}</a></li>
+        <li><a><strong> Ytd Change</strong>   :   {{stuff.ytdChange}}</a></li>
+        
+      </ul>
+      <p class="menu-label is-dark">
+            Administration
+        </p>
+        <ul>
+     <li><a><strong> Market Cape</strong>   :   ${{stuff.marketCap}}</a></li>
+     <li><a><strong> latest Price</strong>   :   {{stuff.latestPrice}}</a></li>
+     <li><a><strong> high</strong>   :   {{stuff.high}}</a></li>
+  </ul>
+    
     </div>
